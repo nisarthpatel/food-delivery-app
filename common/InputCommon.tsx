@@ -12,7 +12,9 @@ const InputCommon: React.FC<Props & ComponentProps<typeof TextInput>> = ({
   return (
     <TextInput
       style={[styles.placeholderStyles, style]}
-      placeholder={placeholder}
+      placeholder={placeholder} 
+      placeholderTextColor={'white'}
+      
       {...props}
     />
   );
@@ -22,9 +24,7 @@ export default InputCommon;
 
 const styles = StyleSheet.create({
   placeholderStyles: {
-    borderBottomWidth: 0.5,
-    fontWeight: 500,
-    fontSize: 15,
-    color: '#000000',
+    fontWeight: 300,
+    fontSize: 18,
   },
 });

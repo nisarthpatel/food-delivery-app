@@ -1,8 +1,8 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-import ButtonCommon from '../components/ButtonCommon';
-import TextCommon from '../components/TextCommon';
+import ButtonCommon from '../common/ButtonCommon';
+import TextCommon from '../common/TextCommon';
 import { RootStackParamList } from '../routes/routes';
 
 type OpeningProps = NativeStackScreenProps<

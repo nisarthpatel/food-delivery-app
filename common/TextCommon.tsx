@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 
 interface Props {
-  text: string;
-  variant: string;
+  text?: string;
+  variant?: string;
   style?: any;
 }
 
