@@ -9,6 +9,8 @@ import FavoritesScreen from '../screens/FavoritesScreen';
 import HomeScreen from '../screens/HomeScreen';
 import NotificationsScreen from '../screens/NotificationsScreen';
 import OnBoardingScreen from '../screens/OnBoardingScreen';
+import AllCoffees from '../components/AllCoffees';
+import CoffeePage from '../components/CoffeePage';
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
@@ -20,6 +22,7 @@ export type RootStackParamList = {
     FavoritesScreen: undefined;
     CartScreen: undefined;
     NotificationsScreen: undefined;
+    CoffeePage: undefined
 };
 
 const HomeTabs = () => {
@@ -38,7 +41,6 @@ const HomeTabs = () => {
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             source={require('../assets/icons8-home-64.png')}
-                            label="Home"
                             focused={focused}
                         />
                     ),
@@ -51,7 +53,6 @@ const HomeTabs = () => {
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             source={require('../assets/icons8-favorites-48.png')}
-                            label="Favorites"
                             focused={focused}
                         />
                     ),
@@ -64,7 +65,6 @@ const HomeTabs = () => {
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             source={require('../assets/icons8-cart-50.png')}
-                            label="Cart"
                             focused={focused}
                         />
                     ),
@@ -77,7 +77,6 @@ const HomeTabs = () => {
                     tabBarIcon: ({ focused }) => (
                         <TabIcon
                             source={require('../assets/icons8-notification-48.png')}
-                            label="Notifications"
                             focused={focused}
                         />
                     ),
@@ -92,7 +91,6 @@ const TabIcon = ({
     focused,
 }: {
     source: any;
-    label: string;
     focused: boolean;
 }) => (
     <View style={styles.tabIconContainer}>
@@ -112,6 +110,7 @@ export const MyStack = () => {
                 screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="OnBoardingScreen" component={OnBoardingScreen} />
                 <Stack.Screen name="HomeScreen" component={HomeTabs} />
+                <Stack.Screen name="CoffeePage" component={CoffeePage} />
             </Stack.Navigator>
         </NavigationContainer>
     );
@@ -126,7 +125,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
         borderRadius: 10,
         height: 90,
-        
+
     },
     shadow: {
         shadowColor: '#7f5df0',
@@ -147,5 +146,5 @@ const styles = StyleSheet.create({
         width: 25,
         height: 25,
     },
-    
+
 });

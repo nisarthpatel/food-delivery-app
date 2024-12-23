@@ -1,4 +1,4 @@
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+
 import React from 'react';
 import {
     Alert,
@@ -14,14 +14,12 @@ import InputCommon from '../common/InputCommon';
 import TextCommon from '../common/TextCommon';
 import AllCoffees from '../components/AllCoffees';
 import { CoffeeData } from '../constants/CoffeeData';
-import { RootStackParamList } from '../routes/routes';
 import FilterIconSvg from '../svgs/FilterIconSvg';
 import SearchIconSvg from '../svgs/SearchIconSvg';
 
 type ItemProps = { title: string; id?: number };
 
-type OpeningProps = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
-const HomeScreen = ({ navigation }: OpeningProps) => {
+const HomeScreen = ({ navigation }: { navigation: any }) => {
 
     const Item = ({ title, id }: ItemProps) => (
         <View style={styles.item}>
@@ -36,6 +34,7 @@ const HomeScreen = ({ navigation }: OpeningProps) => {
             </Pressable>
         );
     };
+
 
     return (
         <View style={styles.container}>
@@ -78,7 +77,7 @@ const HomeScreen = ({ navigation }: OpeningProps) => {
                     keyExtractor={item => (item.id)}
                 />
             </View>
-           <AllCoffees />
+            <AllCoffees />
         </View>
     );
 };
@@ -86,7 +85,7 @@ const HomeScreen = ({ navigation }: OpeningProps) => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-    
+
     item: {
         marginVertical: 8,
         marginHorizontal: 20,
