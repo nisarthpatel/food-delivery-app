@@ -1,7 +1,7 @@
 import React from 'react';
-import { Alert, FlatList, Image, StyleSheet, View } from 'react-native';
+import {Alert, FlatList, Image, StyleSheet, View} from 'react-native';
 import TextCommon from '../common/TextCommon';
-import { CoffeeData } from '../constants/CoffeeData';
+import {CoffeeData} from '../constants/CoffeeData';
 import RatingIconSvg from '../svgs/RatingIconSvg';
 import AddCoffeeIcon from '../svgs/AddCoffeeIcon';
 import CustomTouchable from '../common/CustomTouchable';
@@ -15,16 +15,18 @@ type ItemProps = {
   ingredients: string;
 };
 
-const AllCoffees = ({ navigation }) => {
-
-  const Item = ({ image, title, id, rating, dollar, ingredients }: ItemProps) => (
+const AllCoffees = ({navigation}) => {
+  const Item = ({image, title, id, rating, dollar, ingredients}: ItemProps) => (
     <View style={styles.item}>
       <View style={styles.outerContainer}>
         <View style={styles.overlayContainer}>
           <RatingIconSvg style={styles.ratingIcon} />
           <TextCommon style={styles.rating} text={rating} />
         </View>
-        <CustomTouchable onPress={() => Alert.alert('Hi')} component={<Image style={styles.img} source={{ uri: image }} />} />
+        <CustomTouchable
+          onPress={() => Alert.alert('Hi')}
+          component={<Image style={styles.img} source={{uri: image}} />}
+        />
       </View>
       <View style={styles.innerContainer}>
         <TextCommon style={styles.title} text={title} />
@@ -40,7 +42,7 @@ const AllCoffees = ({ navigation }) => {
     </View>
   );
 
-  const renderItem = ({ item, id }: { item: any; id: number }) => {
+  const renderItem = ({item, id}: {item: any; id: number}) => {
     return (
       <Item
         id={id}
