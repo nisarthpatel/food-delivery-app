@@ -77,9 +77,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.fooddeliveryapp"
+    namespace "com.uiscreensreactnative"
     defaultConfig {
-        applicationId "com.fooddeliveryapp"
+        applicationId "com.uiscreensreactnative"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

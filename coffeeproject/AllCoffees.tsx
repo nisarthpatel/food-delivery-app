@@ -1,7 +1,7 @@
 import React from 'react';
 import {Alert, FlatList, Image, StyleSheet, View} from 'react-native';
 import TextCommon from '../common/TextCommon';
-import {CoffeeData} from '../constants/CoffeeData';
+import {CoffeeData} from './CoffeeData';
 import RatingIconSvg from '../svgs/RatingIconSvg';
 import AddCoffeeIcon from '../svgs/AddCoffeeIcon';
 import CustomTouchable from '../common/CustomTouchable';

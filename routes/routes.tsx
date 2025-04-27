@@ -9,8 +9,8 @@ import FavoritesScreen from '../screens/FavoritesScreen';
 import HomeScreen from '../screens/HomeScreen';
 import NotificationsScreen from '../screens/NotificationsScreen';
 import OnBoardingScreen from '../screens/OnBoardingScreen';
-import AllCoffees from '../components/AllCoffees';
-import CoffeePage from '../components/CoffeePage';
+import AllCoffees from '../coffeeproject/AllCoffees';
+import CoffeePage from '../coffeeproject/CoffeePage';
 
 export type RootStackParamList = {
   OnBoardingScreen: undefined;
